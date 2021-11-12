@@ -55,7 +55,9 @@ def update_plot(frame_number, zarray, plot):
 fig = plt.figure()
 ax = fig.add_subplot(111, projection="3d")
 
-
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_zlabel("h")
 plot = [ax.plot_surface(x, y, zarray[0, 0, :, :], color="0.75", rstride=1, cstride=1)]
 ax.set_zlim(-2, 10)
 ani = animation.FuncAnimation(
